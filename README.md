@@ -11,7 +11,7 @@ Quick & dirty, please don't look at the code ;)
 * Step 2: Capture the cookie of a super admin
 
 The super admin come to the admin page every 30 seconds and does not have Flash
-installed (we are in 2015 for for crying out loud!).
+installed (we are in 2015 for Christ's sake!).
 
 ## How to start it
 You need to have Docker and Docker Compose installed.
