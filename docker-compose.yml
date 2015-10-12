@@ -2,6 +2,7 @@ web:
   build: docker/http
   ports:
     - "80:80"
+  restart: always
   volumes:
     - ./src/:/var/www/html/
   env_file: .env-web
@@ -9,6 +10,7 @@ web:
     - db
 db:
   image: mysql
+  restart: always
   volumes:
     - ./docker/db/table.sql:/docker-entrypoint-initdb.d/table.sql
   env_file:
@@ -16,5 +18,6 @@ db:
     - .env-web
 phantomjs:
   build: docker/phantomjs
+  restart: always
   links:
     - web
