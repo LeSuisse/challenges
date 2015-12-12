@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    <div class="content">
+      <div id="wrapper">
+        <h1>What is my IP address?</h1>
+        <h2>Your IP:</h2>
+        <p><code class="ip">{{ ip }}</code></p>
+        <a href="?cmd=curl" class="pure-button">curl</a>
+        <a href="?cmd=wget" class="pure-button">wget</a>
+        <a href="?cmd=fetch" class="pure-button">fetch</a>
+      </div>
+      <table class="pure-table pure-table-bordered pure-table-striped">
+        <thead>
+          <tr>
+            <th style="width: 350px">Command</th>
+            <th>Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code><span class="command">{{ cmd }} {{ cmd_param }}</span> {{ address }}</code></td>
+            <td class="response">{{ ip }}</td>
+          </tr>
+          {{# data }}
+          <tr>
+            <td><code><span class="command">{{ cmd }} {{ cmd_param }}</span> {{ address }}/{{ key }}</code></td>
+            <td class="response">{{ value }}</td>
+          </tr>
+          {{/ data }}
+          <tr>
+            <td><code><span class="command">{{ cmd }} {{ cmd_param }}</span> {{ address }}/all.json</code></td>
+            <td><pre class="response">{{ json }}</pre></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="admin-info">
+      <a href="/admin.php" class="pure-button">
+        Administration Area
+    </a>
+    </div>
+  </body>
+</html>
