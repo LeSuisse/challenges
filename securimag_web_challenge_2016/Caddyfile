@@ -1,0 +1,8 @@
+localhost
+
+log stdout
+errors stdout
+
+root /var/www/html/public
+
+fastcgi / fpm:9000 php
